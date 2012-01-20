@@ -1,0 +1,47 @@
+<%= form_for(@photo, :html=> {:multipart => true}) do |f| %>
+<% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+
+      <ul>
+      <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render :partial => 'albums', :locals => {:f => f} %>
+
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :taken_on %><br />
+    <%= f.date_select :taken_on %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_name %><br />
+    <%= f.text_field :image_file_name %>
+  </div>
+  <div class="field">
+    <%= f.label :image_content_type %><br />
+    <%= f.text_field :image_content_type %>
+  </div>
+  <div class="field">
+    <%= f.label :image_file_size %><br />
+    <%= f.number_field :image_file_size %>
+  </div>
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

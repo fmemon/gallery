@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @photo.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @photo.description %>
+</p>
+<p>
+  <b>Image:</b>
+  <%= image_tag @photo.image.url (:medium) %>
+</p>
+<p>
+  <b>Taken on:</b>
+  <%= @photo.taken_on %>
+</p>
+
+<p>
+  <b>Image file name:</b>
+  <%= @photo.image_file_name %>
+</p>
+
+<p>
+  <b>Image content type:</b>
+  <%= @photo.image_content_type %>
+</p>
+
+<p>
+  <b>Image file size:</b>
+  <%= @photo.image_file_size %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

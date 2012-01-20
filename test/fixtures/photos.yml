@@ -1,0 +1,32 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  taken_on: 2012-01-20
+  image_file_name: MyString
+  image_content_type: MyString
+  image_file_size: 1
+
+two:
+  title: MyString
+  description: MyText
+  taken_on: 2012-01-20
+  image_file_name: MyString
+  image_content_type: MyString
+  image_file_size: 1
+# == Schema Information
+#
+# Table name: photos
+#
+#  id                 :integer         not null, primary key
+#  title              :string(255)
+#  description        :text
+#  taken_on           :date
+#  image_file_name    :string(255)
+#  image_content_type :string(255)
+#  image_file_size    :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+

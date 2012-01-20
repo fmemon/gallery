@@ -1,0 +1,11 @@
+<h4>Albums</h4>
+
+<ul>
+  <% @albums.each do |a| %>
+    <li>
+      <%= check_box_tag 'photo[album_ids][]', a.id, @photo.albums.include?(a) %>
+        <%= hidden_field_tag 'photo[album_ids][]', '' %>
+        <%= f.label :id, a.title %>
+    </li>
+  <% end %>
+</ul>
